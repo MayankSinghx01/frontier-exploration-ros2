@@ -6,8 +6,8 @@ To create an autonomous frontier exploring robot capable of navigating through o
 
 ## Prerequisites
 
-* Ubuntu 22.04.5
-* ROS 2 Humble
+* Ubuntu **22.04.5**
+* ROS 2 **Humble**
 * Gazebo and RViz2
 * Nav2 and SLAM Toolbox
 
@@ -74,6 +74,8 @@ Nav2 (Navigation2) is the ROS 2 system that lets a robot move to a goal on its o
 
 ## Installations
 
+### Installing Gazebo Classic
+
 1. Install Gazebo (Gazebo Classic packages for ROS2)
 ```
 sudo apt install -y ros-humble-gazebo-*
@@ -118,3 +120,32 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+
+### Installing SLAM Toolbox, RViz2, and Nav2 Stack:
+
+1. Install SLAM Toolbox.
+```
+sudo apt install -y ros-humble-slam-toolbox
+
+```
+
+2. Install RViz2.
+```
+sudo apt install -y ros-humble-rviz2
+
+```
+
+3. Install Nav2 Stack.
+```
+sudo apt install -y ros-humble-navigation2 ros-humble-nav2-bringup
+
+```
+
+## References
+
+* ROS 2 Humble Documentation: https://docs.ros.org/en/humble/Installation.html
+* TurtleBot3 Official e-Manual: https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/
+
+### Image Credits
+
+* TurtleBot3 image courtesy of ROBOTIS: https://www.turtlebot.com/turtlebot3/
