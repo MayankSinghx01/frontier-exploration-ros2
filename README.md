@@ -38,8 +38,6 @@ Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of
 
 Gazebo Classic is a powerful 3D robotics simulator used to test and develop robot algorithms without needing real hardware. It provides a full physics engine, sensor simulation, and ROS 2 integration, allowing developers to run complete robotics pipelines in a virtual environment.
 
-![Gazebo Classic](media/GazeboSimulation.png)
-
 #### ROS 2 integration via `gazebo_ros_pkgs` enables:
 
 * controlling simulated robots with ROS 2 nodes.
@@ -47,6 +45,8 @@ Gazebo Classic is a powerful 3D robotics simulator used to test and develop robo
 * sending velocity commands.
 * spawning URDF/SDF models.
 * running SLAM, navigation, and custom algorithms.
+
+![Gazebo Classic](media/GazeboSimulation.png)
 
 ### TurtleBot3
 
@@ -70,7 +70,11 @@ In ROS 2, SLAM (Simultaneous Localisation and Mapping) is used to build a map of
 
 Nav2 (Navigation2) is the ROS 2 system that lets a robot move to a goal on its own. It uses the map from SLAM, figures out where the robot is, plans a safe path, avoids obstacles, and sends smooth velocity commands to the robot. Nav2 works with TurtleBot3 in both Gazebo simulation and real hardware, making it essential for tasks like autonomous navigation, waypoint following, and exploring indoor environments.
 
-**Path Following Using Nav2 Stack**
+![Simulation Result](https://github.com/MayankSinghx01/frontier-exploration-ros2/releases/download/v1.0/Simulation_Result.gif)
+
+## The Final Result
+
+![The Final Result](https://github.com/MayankSinghx01/frontier-exploration-ros2/releases/download/v1.0/The_Final_Result.gif)
 
 ## Installations
 
