@@ -38,7 +38,7 @@ Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of
 
 Gazebo Classic is a powerful 3D robotics simulator used to test and develop robot algorithms without needing real hardware. It provides a full physics engine, sensor simulation, and ROS 2 integration, allowing developers to run complete robotics pipelines in a virtual environment.
 
-
+![Gazebo Classic](media/GazeboSimulation.png)
 
 #### ROS 2 integration via `gazebo_ros_pkgs` enables:
 
