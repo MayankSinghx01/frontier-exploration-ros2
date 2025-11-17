@@ -20,7 +20,9 @@ To create an autonomous frontier exploring robot capable of navigating through o
 
 ## Turtlesim Package
 
-Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of publishing, subscribing, topics, services, and actions. It provides a simple 2D turtle simulator where you can send velocity commands, draw shapes, control the turtle's pose, or interact through custom nodes. Turtlesim is extremely useful for understanding how ROS 2 communication works before moving on to real robots and complex systems like TurtleBot3, SLAM, and Nav2.
+Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of publishing, subscribing, topics, services, and actions. It provides a simple 2D turtle simulator where you can send velocity commands, draw shapes, control the turtle's pose, or interact through custom nodes.
+
+We used the Turtlesim package in our project to learn the fundamentals of ROS2 and how different publisher and subscriber nodes communicate with each other, how to operate the turtle using teleop commands and how to analyse the `rqt_graph`. We also learned how to create various custom nodes that communicate with the turtlesim node, some of which have been shown below:
 
 ![Spiral Node](media/Spiral.gif)
 
@@ -36,21 +38,24 @@ Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of
 
 ## Gazebo Classic
 
-Gazebo Classic is a powerful 3D robotics simulator used to test and develop robot algorithms without needing real hardware. It provides a full physics engine, sensor simulation, and ROS 2 integration, allowing developers to run complete robotics pipelines in a virtual environment.
+Gazebo Classic is a powerful 3D robotics simulator used to test and develop robot algorithms without needing real hardware.
 
 #### ROS 2 integration via `gazebo_ros_pkgs` enables:
 
 * controlling simulated robots with ROS 2 nodes.
 * publishing sensor data as ROS topics.
 * sending velocity commands.
-* spawning URDF/SDF models.
 * running SLAM, navigation, and custom algorithms.
+
+We used Gazebo Classic to simulate TurtleBot3 `waffle` model in the simulated world. We used teleoperation to run the bot in the gazebo simulated world and created various custom nodes that correctly publish and subscribe to topics that control the robot inside Gazebo.
 
 ![Gazebo Classic](media/GazeboSimulation.png)
 
 ### TurtleBot3
 
-TurtleBot3 is a modular, lightweight, and fully open-source mobile robot designed for learning and research in ROS 2. It comes with built-in packages for simulation, navigation, SLAM, and teleoperation. In Gazebo Classic, you can easily spawn different official models - `burger`, `waffle`, and `waffle_pi` - each with its own size, sensors, and capabilities. TurtleBot3 is widely used for testing algorithms like mapping, localization, frontier exploration, and path planning before deploying to real hardware.
+TurtleBot3 is a modular, lightweight, and fully open-source mobile robot designed for learning and research in ROS 2. It comes with built-in packages for simulation, navigation, SLAM, and teleoperation. In Gazebo Classic, you can easily spawn different official models - `burger`, `waffle`, and `waffle_pi` - each with its own size, sensors, and capabilities.
+
+We used TurtleBot3 for testing algorithms like mapping, localization, frontier exploration, and path planning before deploying to real hardware.
 
 ![TurtleBot3 Models](media/TurtleBot3Models.png)
 
