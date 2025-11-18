@@ -63,11 +63,15 @@ We used TurtleBot3 for testing algorithms like mapping, localization, frontier e
 
 ## SLAM in ROS 2
 
-In ROS 2, SLAM (Simultaneous Localisation and Mapping) is used to build a map of an unknown environment while estimating the robot's position within it. ROS 2 primarily uses two modern SLAM systems: **SLAM Toolbox**, the official and most widely supported 2D laser-based SLAM solution, and **Cartographer**, Google's graph-based LiDAR mapping system. SLAM Toolbox integrates tightly with Nav2 while Cartographer provides fast and accurate scan matching for high-quality maps.
+In ROS 2, SLAM (Simultaneous Localisation and Mapping) is used to build a map of an unknown environment while estimating the robot's position within it. ROS 2 primarily uses two modern SLAM systems: **SLAM Toolbox**, the official and most widely supported 2D laser-based SLAM solution, and **Cartographer**, Google's graph-based LiDAR mapping system.
+
+In our project, we used SLAM Toolbox during simulation because Gazebo provides clean, noise-free sensor data and almost perfect odometry, making SLAM Toolbox lightweight, stable, and ideal for quick testing of mapping and frontier extraction. However, on the real robot we switched to Google Cartographer, as it handles real-world challenges like sensor noise, drift, wheel slip, and timing jitter far more robustly. Cartographer produced smoother, more reliable maps on hardware, which directly improved the stability of frontier detection, centroid selection, and navigation during actual exploration.
 
 ## RViz2 Visualization Software
 
-**RViz2** is the primary 3D visualization tool for ROS 2, used to observe and debug everything happening in a robot system. It displays sensor data (like LiDAR scans and depth images), the live SLAM-generated map, TF coordinate frames, robot pose, costmaps, planned paths, and Nav2 navigation outputs. It makes it easy to understand how the robot perceives its environment and helps verify that SLAM and navigation are working correctly.
+**RViz2** is the primary 3D visualization tool for ROS 2, used to observe and debug everything happening in a robot system. It makes it easy to understand how the robot perceives its environment and helps verify that SLAM and navigation are working correctly.
+
+We used RViz2 as our main visualization tool to test and debug the exploration algorithms. The LIDAR scans, map, and robot pose were visualized live to verify SLAM performance. We also published markers to display detected frontiers, their centroids, the selected goal, and the computed Dijkstra path, which helped us confirm that frontier extraction and path planning were working correctly. RViz essentially acted as a real-time dashboard, allowing us to observe how the robot perceived the environment and how our algorithms responded.
 
 ![RViz2](media/Rviz2.png)
 
