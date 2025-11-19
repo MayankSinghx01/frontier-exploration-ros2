@@ -79,11 +79,20 @@ We used RViz2 as our main visualization tool to test and debug the exploration a
 
 Nav2 (Navigation2) is the ROS 2 system that lets a robot move to a goal on its own. It uses the map from SLAM, figures out where the robot is, plans a safe path, avoids obstacles, and sends smooth velocity commands to the robot. Nav2 works with TurtleBot3 in both Gazebo simulation and real hardware, making it essential for tasks like autonomous navigation, waypoint following, and exploring indoor environments.
 
+We used Nav2 navigation stack to make our robot move to its goal on its own. Nav2 was responsible for handling tasks like path generation, planning, obstacle avoidance and controlling the robot's movements autonomously in real-time when it was given the goal coordinates by our Node.
+
 ![Simulation Result](https://github.com/MayankSinghx01/frontier-exploration-ros2/releases/download/v1.0/Simulation_Result.gif)
 
 ## The Final Result
 
 ![The Final Result](https://github.com/MayankSinghx01/frontier-exploration-ros2/releases/download/v1.0/The_Final_Result.gif)
+
+* **Map Building:** As the robot moves, SLAM continuously updates an occupancy grid showing free space, obstacles, and unknown area.
+* **Frontier Detection:** We scanned the map to find frontiers - boundary cells between free space and unknown space.
+* **Clustering and Centroids:** Frontiers are grouped into clusters, and centroid of each cluster is computed to represent a meaningful explorable target.
+* **Goal Selection:** From all centroids, farthest centroid is chosen as the optimal goal.
+* **Navigation with Nav2:** The chosen centroid is sent to Nav2, which plans a safe path and drives the robot to the centroid autonomously.
+* **Execution and Replanning:** The robot navigates to the goal, updates the map, and the cycle repeats as new frontiers appear.
 
 ## Installations
 
