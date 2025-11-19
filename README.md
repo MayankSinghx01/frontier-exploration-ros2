@@ -24,11 +24,11 @@ Turtlesim is a beginner-friendly ROS 2 package used to learn the fundamentals of
 
 We used the Turtlesim package in our project to learn the fundamentals of ROS2 and how different publisher and subscriber nodes communicate with each other, how to operate the turtle using teleop commands and how to analyse the `rqt_graph`. We also learned how to create various custom nodes that communicate with the turtlesim node, some of which have been shown below:
 
-![Spiral Node](media/Spiral.gif)
+![Spiral Node](media/Spiral_Trajectory.gif)
 
 **Spiral Trajectory**
 
-![N-SIded Polygon Node](media/N_Sided_Polygon.gif)
+![N-SIded Polygon Node](media/N_Sided_Polygon_Trajectory.gif)
 
 **N-Sided Polygon**
 
